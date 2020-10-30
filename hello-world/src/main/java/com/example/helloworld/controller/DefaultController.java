@@ -41,4 +41,17 @@ public class DefaultController {
         cmd.originalShellCmd();
         return "preview";
     }
+
+    @RequestMapping(value="/crop.do")
+    public String crop_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
+        return "crop";
+    }
+
+    @RequestMapping(value="/crop.do", method=RequestMethod.POST)
+    public String crop_page_post(String width, String height, String xPoint, String yPoint,String center, Model model) {
+        cmd.cropShellCmd(width,height,xPoint,yPoint,center);
+        model.addAttribute("imgName", "crop.jpg");
+        return "crop";
+    }
 }

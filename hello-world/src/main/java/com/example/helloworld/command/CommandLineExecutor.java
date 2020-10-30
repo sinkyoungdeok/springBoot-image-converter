@@ -80,7 +80,21 @@ public class CommandLineExecutor{
         }
         cmdStr += " -o "+ defaultPath + "resize.jpg -H \"Host: cdn.011st.com\"";
         executeCmd(cmdStr);
+    }
+    
+    public void cropShellCmd(String width, String height, String xPoint, String yPoint,String center) {
+        if(xPoint == null) xPoint = "0";
+        if(yPoint == null) yPoint = "0";
         
+        cmdStr = "curl http://1.255.134.156:3000/ds/2020/09/25/1130/76bc9e49b5bda8e952261ecd2752f344.jpg/dims/";
+        if(center != null ) {
+            cmdStr += "cropcenter/";
+        }  else {
+            cmdStr += "crop/";
+        }
+        cmdStr += width + "x" + height + "+" + xPoint + "+"+ yPoint + " -o " + defaultPath + "crop.jpg -H \"Host: cdn.011st.com\"";
+        executeCmd(cmdStr);
+        System.out.println(cmdStr);
     }
 
 }
