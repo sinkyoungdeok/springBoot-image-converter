@@ -75,12 +75,12 @@ public class CommandLineExecutor{
         cmdStr = "curl http://1.255.134.156:3000/ds/2020/09/25/1130/76bc9e49b5bda8e952261ecd2752f344.jpg/dims/resize/";
         if(percent != null) {
             cmdStr += percent + "%";
-            //cmdStr = "curl http://1.255.134.156:3000/ds/2020/09/25/1130/76bc9e49b5bda8e952261ecd2752f344.jpg/dims/resize/50% -o "+ defaultPath + "/resize.jpg -H \"Host: cdn.011st.com\"";
         } else {
             cmdStr += width + "x" + height;
         }
-        cmdStr += " -o "+ defaultPath + "/resize.jpg -H \"Host: cdn.011st.com\"";
+        cmdStr += " -o "+ defaultPath + "resize.jpg -H \"Host: cdn.011st.com\"";
         executeCmd(cmdStr);
+        
     }
 
 }

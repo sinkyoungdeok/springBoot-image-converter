@@ -6,7 +6,8 @@
 	<title>CMAF Streaming</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
-	<meta content="" name="author" />
+    <meta content="" name="author" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -140,7 +141,10 @@
             <!-- end page-header -->
             <!-- begin row -->
 			<div class="row" >
-                <img src="resources/images/${imgName}"> 
+                <img id="itemImg" src="resources/images/${imgName}"> 
+                <script> var tmpDate = new Date(); $("#itemImg").attr("src", "resources/images/${imgName}?"+tmpDate.getTime()); </script>
+
+                
 			</div>
 			<!-- end row -->
 
@@ -151,7 +155,7 @@
                     <div class="col-sm-2">
                         <input name="percent" type="text" class="form-control" placeholder="percent">
                     </div>
-                    <button type="submit" class="btn btn-sm btn-primary m-r-5"> Apply Change </button>
+                    <button type="submit" class="btn btn-sm btn-primary m-r-5" > Apply Change </button>
                     
                 </div>
                 </form>
@@ -168,7 +172,7 @@
                     <div class="col-sm-2">
                         <input name="height" type="text" class="form-control" placeholder="height">
                     </div>
-                    <button type="submit" class="btn btn-sm btn-primary m-r-5"> Apply Change </button>
+                    <button type="submit" class="btn btn-sm btn-primary m-r-5" > Apply Change </button>
                     
                 </div>
                 </form>
@@ -186,12 +190,15 @@
 <script src="resources/assets/js/theme/facebook.min.js"></script>
 <!-- ================== END BASE JS ================== -->
 
-<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->\
 <script src="resources/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-<!--	<script src="resources/assets/js/demo/dashboard.js"></script> -->
+ <script src="resources/assets/js/demo/dashboard.js"></script> 
  <script src="https://unpkg.com/video.js/dist/video.js"></script>
  <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+ 
+
+
 <!-- ================== END PAGE LEVEL JS ================== -->
 </body>
 </html>
