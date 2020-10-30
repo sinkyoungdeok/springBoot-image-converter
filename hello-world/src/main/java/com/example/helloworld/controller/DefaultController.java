@@ -54,4 +54,19 @@ public class DefaultController {
         model.addAttribute("imgName", "crop.jpg");
         return "crop";
     }
+
+    @RequestMapping(value="/composite.do")
+    public String composite_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
+        return "composite";
+    }
+
+    @RequestMapping(value="/composite.do", method=RequestMethod.POST)
+    public String composite_page_post(String img, Model model) {
+        cmd.compositeShellCmd();
+        model.addAttribute("imgName", "composite.jpg");
+        return "composite";
+    }
+
+    
 }

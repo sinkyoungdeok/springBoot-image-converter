@@ -94,6 +94,11 @@ public class CommandLineExecutor{
         }
         cmdStr += width + "x" + height + "+" + xPoint + "+"+ yPoint + " -o " + defaultPath + "crop.jpg -H \"Host: cdn.011st.com\"";
         executeCmd(cmdStr);
+    }
+    
+    public void compositeShellCmd() {
+        cmdStr = "curl http://1.255.134.156:3000/ds/2020/09/25/1130/76bc9e49b5bda8e952261ecd2752f344.jpg/dims/composite/water1c -o "+ defaultPath + "composite.jpg -H \"Host: cdn.011st.com\"";
+        executeCmd(cmdStr);
         System.out.println(cmdStr);
     }
 
