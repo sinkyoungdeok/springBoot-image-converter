@@ -152,20 +152,6 @@
 	<!-- end page container -->
 
     
-name : ${name}
-<script class="code">
-    document.addEventListener("DOMContentLoaded", function () {
-		videojs("my_video_1", {}, function(){
-		          var myPlayer = this;
-		          myPlayer.volume(0);
-		});
-		videojs("my_video_2", {}, function(){
-		          var myPlayer2 = this;
-		          myPlayer2.volume(0);
-		});
-
-    });
-</script>
 <!-- ================== BEGIN BASE JS ================== -->
 <script src="resources/assets/js/app.min.js"></script>
 <script src="resources/assets/js/theme/facebook.min.js"></script>
