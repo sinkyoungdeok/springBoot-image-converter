@@ -93,6 +93,19 @@ public class DefaultController {
         model.addAttribute("imgName", "imageFormatConversion.jpg");
         return "imageFormatConversion";
     }
+
+    @RequestMapping(value="/imageQuality.do")
+    public String imageQuality_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
+        return "imageQuality";
+    }
+
+    @RequestMapping(value="/imageQuality.do", method=RequestMethod.POST)
+    public String imageQuality_page_post(String quality, Model model) {
+        cmd.imageQualityShellCmd(quality);
+        model.addAttribute("imgName", "imageQuality.jpg");
+        return "imageQuality";
+    }
     
 
     

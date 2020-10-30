@@ -113,7 +113,13 @@ public class CommandLineExecutor{
         cmdStr += format;
         cmdStr += " -o "+ defaultPath + "format."+ format+" -H \"Host: cdn.011st.com\"";
         executeCmd(cmdStr);
-        System.out.println(cmdStr);
+    }
+
+    public void imageQualityShellCmd(String quality) {
+        cmdStr = "curl http://1.255.134.156:3000/ds/2020/09/25/1130/76bc9e49b5bda8e952261ecd2752f344.jpg/dims/quality/";
+        cmdStr += quality;
+        cmdStr += " -o "+ defaultPath + "quality.jpg -H \"Host: cdn.011st.com\"";
+        executeCmd(cmdStr);
     }
 
 }
