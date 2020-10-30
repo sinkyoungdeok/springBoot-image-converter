@@ -68,5 +68,34 @@ public class DefaultController {
         return "composite";
     }
 
+    @RequestMapping(value="/thumbnail.do")
+    public String thumbnail_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
+        return "thumbnail";
+    }
+
+    @RequestMapping(value="/thumbnail.do", method=RequestMethod.POST)
+    public String thumbnail_page_post(String percent, Model model) {
+        cmd.thumbnailShellCmd(percent);
+        model.addAttribute("imgName", "thumbnail.jpg");
+        return "thumbnail";
+    }
+
+    @RequestMapping(value="/imageFormatConversion.do")
+    public String imageFormatConversion_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
+        return "imageFormatConversion";
+    }
+
+    @RequestMapping(value="/imageFormatConversion.do", method=RequestMethod.POST)
+    public String imageFormatConversion_page_post(String format, Model model) {
+        cmd.imageFormatConversionShellCmd(format);
+        model.addAttribute("imgName", "imageFormatConversion.jpg");
+        return "imageFormatConversion";
+    }
+    
+
+    
+
     
 }
