@@ -1,8 +1,7 @@
 package com.example.helloworld.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 import com.example.helloworld.command.CommandLineExecutor;
@@ -26,7 +25,13 @@ public class DefaultController {
 
     @RequestMapping(value="/resize.do")
     public String resize_page(Model model) {
+        return "resize";
+    }
+
+    @RequestMapping(value="/resize.do", method=RequestMethod.POST)
+    public String resize_page_post(String percent,String width,String height,Model model) {
         cmd.resizeShellCmd();
+        System.out.println(percent + "," + width+","+height);
         return "resize";
     }
 

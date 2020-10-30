@@ -125,21 +125,61 @@
 			<!-- end sidebar scrollbar -->
 		</div>
 		<div class="sidebar-bg"></div>
-		<!-- end #sidebar -->
-    
-name : ${name}
-<script class="code">
-    document.addEventListener("DOMContentLoaded", function () {
-		videojs("my_video_1", {}, function(){
-		          var myPlayer = this;
-		          myPlayer.volume(0);
-		});
-		videojs("my_video_2", {}, function(){
-		          var myPlayer2 = this;
-		          myPlayer2.volume(0);
-		});
+        <!-- end #sidebar -->
+        <!-- begin #content -->
+        <div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item active">Resize</li>
+            </ol>
+            <!-- end breadcrumb -->
 
-    });
+			<!-- begin page-header -->
+			<h1 class="page-header">DIMS <small>demo</small> </h1>
+            <!-- end page-header -->
+            <!-- begin row -->
+			<div class="row" >
+                <img src="resources/images/org.jpg"> 
+			</div>
+			<!-- end row -->
+
+             <!-- begin row -->
+             <form action="" method="POST">
+                <div class="row">
+                    
+                    <div class="col-sm-2">
+                        <input name="percent" type="text" class="form-control" placeholder="percent">
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary m-r-5"> Apply Change </button>
+                    
+                </div>
+                </form>
+                <!-- end row -->
+    
+    
+                <!-- begin row -->
+                <form action="" method="POST">
+                <div class="row">
+                    
+                    <div class="col-sm-2">
+                        <input name="width" type="text" class="form-control" placeholder="width">
+                    </div>
+                    <div class="col-sm-2">
+                        <input name="height" type="text" class="form-control" placeholder="height">
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary m-r-5"> Apply Change </button>
+                    
+                </div>
+                </form>
+                <!-- end row -->
+            </div>
+            <!-- end #content -->
+    
+    
+        </div>
+        <!-- end page container -->
+    
 </script>
 <!-- ================== BEGIN BASE JS ================== -->
 <script src="resources/assets/js/app.min.js"></script>
