@@ -11,7 +11,6 @@
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="resources/assets/css/facebook/app.min.css" rel="stylesheet" />
-    <link href=""
 	<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 	<!-- ================== END BASE CSS STYLE ================== -->
 
