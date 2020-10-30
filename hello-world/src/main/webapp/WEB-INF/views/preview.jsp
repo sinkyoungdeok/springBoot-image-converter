@@ -62,7 +62,7 @@
 				<!-- begin sidebar nav -->
 				<ul class="nav">
 					<li class="nav-header">Navigation</li>
-					<li class="active">
+					<li class="has-sub">
 						<a href="index.do" data-toggle="ajax">
 							<i class="fab fa-simplybuilt"></i>
 							<b class="caret"></b>
@@ -70,7 +70,7 @@
 							
 						</a>
 					</li>
-					<li class="has-sub">
+					<li class="active">
 						<a href="preview.do" data-toggle="ajax">
 							<i class="fab fa-simplybuilt"></i>
 							<b class="caret"></b>
@@ -126,7 +126,32 @@
 			<!-- end sidebar scrollbar -->
 		</div>
 		<div class="sidebar-bg"></div>
-		<!-- end #sidebar -->
+        <!-- end #sidebar -->
+        
+        <!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item active">Preview</li>
+			</ol>
+			<!-- end breadcrumb -->
+
+			<!-- begin page-header -->
+			<h1 class="page-header">DIMS <small>demo</small> </h1>
+			<!-- end page-header -->
+			<!-- begin row -->
+			<div class="row" >
+                <img src="resources/images/org.jpg"> 
+			</div>
+			<!-- end row -->
+		</div>
+        <!-- end #content -->
+        
+
+    </div>
+	<!-- end page container -->
+
     
 name : ${name}
 <script class="code">

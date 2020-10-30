@@ -62,7 +62,7 @@
 				<!-- begin sidebar nav -->
 				<ul class="nav">
 					<li class="nav-header">Navigation</li>
-					<li class="active">
+					<li class="has-sub">
 						<a href="index.do" data-toggle="ajax">
 							<i class="fab fa-simplybuilt"></i>
 							<b class="caret"></b>
@@ -77,7 +77,7 @@
 							<span>Preview</span>
 						</a>
 					</li>
-					<li class="has-sub">
+					<li class="active">
 						<a href="resize.do" data-toggle="ajax">
 							<i class="fab fa-simplybuilt"></i>
 							<b class="caret"></b>
