@@ -140,7 +140,7 @@
             <!-- end page-header -->
             <!-- begin row -->
 			<div class="row" >
-                <img src="resources/images/org.jpg"> 
+                <img src="resources/images/${imgName}"> 
 			</div>
 			<!-- end row -->
 

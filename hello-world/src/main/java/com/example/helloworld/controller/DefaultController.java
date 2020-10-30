@@ -25,6 +25,7 @@ public class DefaultController {
 
     @RequestMapping(value="/resize.do")
     public String resize_page(Model model) {
+        model.addAttribute("imgName", "org.jpg");
         return "resize";
     }
 
@@ -32,6 +33,7 @@ public class DefaultController {
     public String resize_page_post(String percent,String width,String height,Model model) {
         cmd.resizeShellCmd();
         System.out.println(percent + "," + width+","+height);
+        model.addAttribute("imgName", "resize.jpg");
         return "resize";
     }
 
